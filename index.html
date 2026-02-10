@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NutriChef Pro - De Revolutionaire Voedsel Maker</title>
+    <title>VoedselMaker - Revolutionair Keukenapparaat</title>
     <style>
         /* Algemene stijlen */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
         }
         
         body {
-            background-color: #f9f9f9;
+            background-color: #f8f9fa;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.7;
         }
         
         .container {
@@ -26,15 +26,12 @@
             padding: 0 20px;
         }
         
-        /* Header en navigatie */
+        /* Header */
         header {
-            background: linear-gradient(to right, #4CAF50, #2E7D32);
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
             color: white;
-            padding: 20px 0;
+            padding: 25px 0;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
         
         .header-content {
@@ -44,24 +41,32 @@
         }
         
         .logo {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: bold;
             display: flex;
             align-items: center;
         }
         
         .logo-icon {
-            margin-right: 10px;
-            font-size: 32px;
+            margin-right: 15px;
+            font-size: 38px;
         }
         
+        .tagline {
+            font-size: 16px;
+            font-weight: normal;
+            opacity: 0.9;
+            margin-left: 10px;
+        }
+        
+        /* Navigatie */
         nav ul {
             display: flex;
             list-style: none;
         }
         
         nav ul li {
-            margin-left: 25px;
+            margin-left: 30px;
         }
         
         nav ul li a {
@@ -69,56 +74,56 @@
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s;
-            padding: 5px 10px;
+            padding: 8px 15px;
             border-radius: 4px;
         }
         
         nav ul li a:hover {
-            background-color: rgba(255,255,255,0.2);
+            background-color: rgba(255,255,255,0.15);
         }
         
         /* Hero sectie */
         .hero {
             padding: 80px 0;
-            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB4PSIwIiB5PSIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2U4ZjBmNSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
             text-align: center;
         }
         
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
+            font-size: 52px;
+            margin-bottom: 25px;
             color: #2E7D32;
         }
         
         .hero p {
             font-size: 22px;
-            max-width: 800px;
-            margin: 0 auto 30px;
+            max-width: 850px;
+            margin: 0 auto 40px;
             color: #555;
         }
         
-        .cta-button {
+        .info-button {
             display: inline-block;
-            background-color: #FF5722;
+            background-color: #2196F3;
             color: white;
-            padding: 15px 40px;
+            padding: 16px 45px;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 8px;
             font-weight: bold;
             font-size: 18px;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(255,87,34,0.3);
+            box-shadow: 0 4px 15px rgba(33,150,243,0.2);
+            border: none;
+            cursor: pointer;
         }
         
-        .cta-button:hover {
-            background-color: #E64A19;
+        .info-button:hover {
+            background-color: #1976D2;
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255,87,34,0.4);
+            box-shadow: 0 6px 20px rgba(33,150,243,0.3);
         }
         
-        /* Product kleuren sectie */
+        /* Kleuren sectie */
         .product-colors {
             padding: 80px 0;
             text-align: center;
@@ -126,18 +131,18 @@
         }
         
         .section-title {
-            font-size: 36px;
-            margin-bottom: 15px;
+            font-size: 40px;
+            margin-bottom: 20px;
             color: #2E7D32;
             text-align: center;
         }
         
         .section-subtitle {
-            font-size: 18px;
-            color: #777;
-            margin-bottom: 50px;
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 60px;
             text-align: center;
-            max-width: 800px;
+            max-width: 850px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -146,118 +151,122 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 30px;
-            margin-bottom: 50px;
+            gap: 40px;
+            margin-bottom: 60px;
         }
         
         .color-option {
-            width: 250px;
-            padding: 30px 20px;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            transition: all 0.3s;
+            width: 280px;
+            padding: 35px 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s;
             cursor: pointer;
         }
         
         .color-option:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
         
         .color-swatch {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            margin: 0 auto 20px;
-            border: 5px solid white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin: 0 auto 25px;
+            border: 8px solid white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
         
         .color-name {
-            font-size: 22px;
+            font-size: 26px;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         
         .color-description {
             color: #666;
+            font-size: 17px;
         }
         
-        #classic-red {
-            background-color: #E53935;
+        #vurig-rood {
+            background-color: #F44336;
             color: white;
         }
         
-        #ocean-blue {
-            background-color: #1E88E5;
+        #hemels-blauw {
+            background-color: #2196F3;
             color: white;
         }
         
-        #forest-green {
-            background-color: #43A047;
+        #aards-groen {
+            background-color: #4CAF50;
             color: white;
         }
         
-        #sunshine-yellow {
-            background-color: #FFD600;
+        #zonnig-geel {
+            background-color: #FFEB3B;
             color: #333;
         }
         
         /* Voedselzakjes sectie */
         .food-packets {
             padding: 80px 0;
-            background-color: #f5f5f5;
+            background-color: #f0f7f0;
         }
         
         .packets-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 35px;
             justify-content: center;
         }
         
         .packet-card {
             background-color: white;
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
-            width: 300px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            transition: all 0.3s;
+            width: 320px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s;
         }
         
         .packet-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
         
         .packet-image {
-            height: 200px;
-            background-color: #ddd;
+            height: 220px;
+            background-color: #e8f5e9;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 60px;
+            font-size: 70px;
         }
         
         .packet-content {
-            padding: 25px;
+            padding: 30px;
         }
         
         .packet-title {
-            font-size: 22px;
-            margin-bottom: 10px;
+            font-size: 24px;
+            margin-bottom: 15px;
             color: #2E7D32;
         }
         
         .packet-description {
             color: #666;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            font-size: 17px;
         }
         
-        .packet-price {
-            font-size: 24px;
+        .packet-info {
+            font-size: 18px;
             font-weight: bold;
-            color: #FF5722;
+            color: #2196F3;
+            padding: 12px 0;
+            border-top: 1px solid #eee;
         }
         
         /* Product details sectie */
@@ -267,169 +276,264 @@
         }
         
         .details-container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         
         .details-text {
             columns: 2;
-            column-gap: 50px;
-            margin-top: 40px;
+            column-gap: 60px;
+            column-rule: 1px solid #eee;
+            margin-top: 50px;
         }
         
         .details-text p {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             text-align: justify;
+            font-size: 18px;
+            line-height: 1.8;
         }
         
-        /* Features sectie */
-        .features {
+        .highlight-box {
+            background-color: #f0f7f0;
+            border-left: 5px solid #4CAF50;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        /* Werking sectie */
+        .how-it-works {
             padding: 80px 0;
-            background-color: #f5f5f5;
+            background-color: #f0f7f0;
         }
         
-        .features-grid {
+        .steps-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .step {
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        
+        .step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .step-number {
+            font-size: 60px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        
+        .step-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #2E7D32;
+        }
+        
+        /* Technische specificaties */
+        .specifications {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .specs-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
         
-        .feature {
-            background-color: white;
+        .spec-item {
+            background-color: #f8f9fa;
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-            transition: all 0.3s;
+            border-left: 5px solid #2196F3;
         }
         
-        .feature:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-        }
-        
-        .feature-icon {
-            font-size: 40px;
-            margin-bottom: 20px;
-            color: #2E7D32;
-        }
-        
-        .feature-title {
+        .spec-title {
             font-size: 22px;
             margin-bottom: 15px;
-            color: #2E7D32;
+            color: #333;
         }
         
-        /* Testimonials */
-        .testimonials {
+        /* Vergelijkingstabel */
+        .comparison {
+            padding: 80px 0;
+            background-color: #f0f7f0;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 25px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .comparison-table th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #f0f7f0;
+        }
+        
+        .checkmark {
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .cross {
+            color: #F44336;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        /* Veelgestelde vragen */
+        .faq {
             padding: 80px 0;
             background-color: white;
         }
         
-        .testimonial-slider {
-            max-width: 800px;
+        .faq-container {
+            max-width: 900px;
             margin: 50px auto 0;
-            position: relative;
         }
         
-        .testimonial {
-            background-color: #f9f9f9;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-            text-align: center;
-            display: none;
-        }
-        
-        .testimonial.active {
-            display: block;
-        }
-        
-        .testimonial-text {
-            font-size: 18px;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-        
-        .testimonial-author {
-            font-weight: bold;
-            color: #2E7D32;
-        }
-        
-        .slider-nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-            gap: 10px;
-        }
-        
-        .slider-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #ddd;
-            cursor: pointer;
+        .faq-item {
+            margin-bottom: 25px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            overflow: hidden;
             transition: all 0.3s;
         }
         
-        .slider-dot.active {
-            background-color: #2E7D32;
+        .faq-item:hover {
+            border-color: #4CAF50;
+        }
+        
+        .faq-question {
+            padding: 25px;
+            background-color: #f8f9fa;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+        }
+        
+        .faq-answer.open {
+            padding: 25px;
+            max-height: 1000px;
         }
         
         /* Footer */
         footer {
             background-color: #333;
             color: white;
-            padding: 60px 0 30px;
+            padding: 70px 0 40px;
         }
         
         .footer-content {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
         
         .footer-section {
             flex: 1;
             min-width: 250px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         
         .footer-section h3 {
-            font-size: 22px;
-            margin-bottom: 20px;
+            font-size: 24px;
+            margin-bottom: 25px;
             color: #4CAF50;
         }
         
         .footer-section p {
             color: #bbb;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+        
+        .disclaimer {
+            background-color: #222;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #F44336;
         }
         
         .copyright {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 40px;
             border-top: 1px solid #444;
             color: #bbb;
-            font-size: 14px;
+            font-size: 16px;
         }
         
         /* Responsive aanpassingen */
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
+            .details-text {
+                columns: 1;
+            }
+            
             .header-content {
                 flex-direction: column;
+                text-align: center;
             }
             
             nav ul {
-                margin-top: 20px;
+                margin-top: 25px;
+                justify-content: center;
             }
             
             nav ul li {
-                margin-left: 15px;
-                margin-right: 15px;
+                margin: 0 10px;
             }
-            
+        }
+        
+        @media (max-width: 768px) {
             .hero h1 {
                 font-size: 36px;
             }
@@ -438,33 +542,57 @@
                 font-size: 18px;
             }
             
-            .details-text {
-                columns: 1;
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .section-subtitle {
+                font-size: 18px;
             }
             
             .color-options {
                 flex-direction: column;
                 align-items: center;
             }
+            
+            .color-option {
+                width: 100%;
+                max-width: 350px;
+            }
         }
         
-        /* Animatie voor kleur selectie */
-        .selected {
-            border: 3px solid #333;
+        /* Animatie voor geselecteerde kleur */
+        .selected-color {
+            border: 4px solid #333;
             position: relative;
+            transform: scale(1.05);
         }
         
-        .selected::after {
-            content: "✓ Geselecteerd";
+        .selected-color::after {
+            content: "✓";
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 15px;
+            right: 15px;
             background-color: #333;
             color: white;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
             font-weight: bold;
+        }
+        
+        /* Informatieve notitie */
+        .info-note {
+            background-color: #E3F2FD;
+            border-left: 5px solid #2196F3;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -473,8 +601,11 @@
     <header>
         <div class="container header-content">
             <div class="logo">
-                <span class="logo-icon">🍳</span>
-                <span>NutriChef Pro</span>
+                <span class="logo-icon">🍲</span>
+                <div>
+                    <div>VoedselMaker</div>
+                    <div class="tagline">Revolutionair keukenapparaat voor de moderne huis</div>
+                </div>
             </div>
             <nav>
                 <ul>
@@ -482,7 +613,7 @@
                     <li><a href="#colors">Kleuren</a></li>
                     <li><a href="#packets">Voedselzakjes</a></li>
                     <li><a href="#details">Details</a></li>
-                    <li><a href="#features">Kenmerken</a></li>
+                    <li><a href="#werking">Werking</a></li>
                 </ul>
             </nav>
         </div>
@@ -491,81 +622,90 @@
     <!-- Hero Sectie -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>De Revolutionaire NutriChef Pro Voedsel Maker</h1>
-            <p>Maak in seconden heerlijke, gezonde maaltijden met ons innovatieve keukenapparaat. Beschikbaar in 4 stijlvolle kleuren die bij elke keuken passen.</p>
-            <a href="#colors" class="cta-button">Ontdek de kleuren</a>
+            <h1>VoedselMaker: De Toekomst van Thuiskoken</h1>
+            <p>Ontdek het revolutionaire keukenapparaat dat koken transformeert. Met vier stijlvolle kleuren en speciale voedselzakjes maakt de VoedselMaker gezonde, heerlijke maaltijden in minuten.</p>
+            <div class="info-note">
+                <strong>Let op:</strong> Deze website is een informatiepagina voor een schoolproject. Het is niet mogelijk om producten te bestellen of te kopen via deze site.
+            </div>
+            <button class="info-button" onclick="showMoreInfo()">Meer Informatie</button>
         </div>
     </section>
 
     <!-- Product Kleuren Sectie -->
     <section class="product-colors" id="colors">
         <div class="container">
-            <h2 class="section-title">Kies Jouw Favoriete Kleur</h2>
-            <p class="section-subtitle">De NutriChef Pro is beschikbaar in 4 stijlvolle kleuren, elk ontworpen om perfect bij jouw keuken te passen en je kookervaring te verbeteren.</p>
+            <h2 class="section-title">Kies Uw Voorkeurskleur</h2>
+            <p class="section-subtitle">De VoedselMaker is beschikbaar in vier opvallende kleuren, elk met een uniek karakter dat past bij uw keuken en persoonlijkheid.</p>
             
             <div class="color-options">
-                <div class="color-option" id="classic-red" onclick="selectColor('classic-red')">
+                <div class="color-option" id="vurig-rood" onclick="selectColor('vurig-rood')">
                     <div class="color-swatch"></div>
-                    <h3 class="color-name">Klassiek Rood</h3>
-                    <p class="color-description">Levendig en energiek, perfect voor de moderne keuken.</p>
+                    <h3 class="color-name">Vurig Rood</h3>
+                    <p class="color-description">Voor de passionele kok die houdt van energie en warmte in de keuken. Deze kleur straalt enthousiasme uit.</p>
                 </div>
                 
-                <div class="color-option" id="ocean-blue" onclick="selectColor('ocean-blue')">
+                <div class="color-option" id="hemels-blauw" onclick="selectColor('hemels-blauw')">
                     <div class="color-swatch"></div>
-                    <h3 class="color-name">Oceaan Blauw</h3>
-                    <p class="color-description">Kalmerend en verfijnd, voor een serene kookervaring.</p>
+                    <h3 class="color-name">Hemels Blauw</h3>
+                    <p class="color-description">Kalmerend en verfijnd, perfect voor een rustige kookervaring. Deze kleur brengt sereniteit in uw keuken.</p>
                 </div>
                 
-                <div class="color-option" id="forest-green" onclick="selectColor('forest-green')">
+                <div class="color-option" id="aards-groen" onclick="selectColor('aards-groen')">
                     <div class="color-swatch"></div>
-                    <h3 class="color-name">Bos Groen</h3>
-                    <p class="color-description">Natuurlijk en aards, ideaal voor de gezonde kok.</p>
+                    <h3 class="color-name">Aards Groen</h3>
+                    <p class="color-description">Natuurlijk en gezond, voor de kok die waarde hecht aan duurzaamheid en verse ingrediënten.</p>
                 </div>
                 
-                <div class="color-option" id="sunshine-yellow" onclick="selectColor('sunshine-yellow')">
+                <div class="color-option" id="zonnig-geel" onclick="selectColor('zonnig-geel')">
                     <div class="color-swatch"></div>
-                    <h3 class="color-name">Zonneschijn Geel</h3>
-                    <p class="color-description">Vrolijk en energiek, brengt licht in je keuken.</p>
+                    <h3 class="color-name">Zonnig Geel</h3>
+                    <p class="color-description">Vrolijk en energiek, deze kleur brengt zonneschijn in uw keuken en maakt elke maaltijd feestelijk.</p>
                 </div>
             </div>
             
-            <p>Selecteer een kleur om deze te zien als jouw voorkeursoptie. Elke kleur wordt geleverd met dezelfde hoogwaardige functies en prestaties, alleen de esthetiek verschilt.</p>
+            <div class="info-note">
+                <strong>Informatie:</strong> Selecteer een kleur om deze te markeren als uw voorkeur. Deze pagina is uitsluitend voor informatieve doeleinden.
+            </div>
         </div>
     </section>
 
     <!-- Voedselzakjes Sectie -->
     <section class="food-packets" id="packets">
         <div class="container">
-            <h2 class="section-title">Speciale Voedselzakjes voor de NutriChef Pro</h2>
-            <p class="section-subtitle">Onze voedselzakjes zijn speciaal ontworpen voor optimale prestaties in de NutriChef Pro. Elke zak bevat zorgvuldig geselecteerde ingrediënten voor perfecte resultaten elke keer.</p>
+            <h2 class="section-title">Speciale Voedselzakjes voor de VoedselMaker</h2>
+            <p class="section-subtitle">De VoedselMaker werkt met speciaal ontworpen voedselzakjes die optimale resultaten garanderen. Elke zak bevat perfect afgemeten ingrediënten.</p>
             
             <div class="packets-container">
                 <div class="packet-card">
-                    <div class="packet-image" style="background-color: #FFEBEE;">🥗</div>
+                    <div class="packet-image">🥦</div>
                     <div class="packet-content">
-                        <h3 class="packet-title">Verse Groenten Mix</h3>
-                        <p class="packet-description">Een uitgebalanceerde mix van seizoensgroenten, perfect voor soepen, stoofschotels en bijgerechten. Bevat wortelen, broccoli, paprika en uien.</p>
-                        <div class="packet-price">€12,99 per 5 zakken</div>
+                        <h3 class="packet-title">Groente Deluxe Zak</h3>
+                        <p class="packet-description">Een uitgebalanceerde mix van seizoensgroenten, inclusief broccoli, wortelen, paprika en sperziebonen. Perfect voor soepen, roerbakschotels en bijgerechten.</p>
+                        <div class="packet-info">Genoeg voor 4 porties</div>
                     </div>
                 </div>
                 
                 <div class="packet-card">
-                    <div class="packet-image" style="background-color: #E3F2FD;">🥩</div>
+                    <div class="packet-image">🍗</div>
                     <div class="packet-content">
-                        <h3 class="packet-title">Premium Proteïne Selectie</h3>
-                        <p class="packet-description">Hoogwaardige eiwitbronnen inclusief kip, rundvlees en tofu. Perfect voor hoofdgerechten en maaltijden met veel eiwitten.</p>
-                        <div class="packet-price">€18,99 per 5 zakken</div>
+                        <h3 class="packet-title">Proteïne Power Zak</h3>
+                        <p class="packet-description">Hoogwaardige eiwitbronnen zoals kipfilet, rundvlees en tofu, gemarineerd met kruiden. Ideaal voor hoofdgerechten en eiwitrijke maaltijden.</p>
+                        <div class="packet-info">Genoeg voor 3-4 porties</div>
                     </div>
                 </div>
                 
                 <div class="packet-card">
-                    <div class="packet-image" style="background-color: #E8F5E8;">🍜</div>
+                    <div class="packet-image">🌮</div>
                     <div class="packet-content">
-                        <h3 class="packet-title">Wereldkeuken Specialiteiten</h3>
-                        <p class="packet-description">Ontdek internationale smaken met onze Italiaanse, Aziatische en Mexicaanse zakjes. Compleet met kruiden en specerijen.</p>
-                        <div class="packet-price">€15,99 per 5 zakken</div>
+                        <h3 class="packet-title">Wereldkeuken Mix</h3>
+                        <p class="packet-description">Ontdek internationale smaken met deze zakjes. Bevat ingrediënten voor Italiaanse, Aziatische en Mexicaanse gerechten, compleet met authentieke kruiden.</p>
+                        <div class="packet-info">Genoeg voor 2-3 porties</div>
                     </div>
                 </div>
+            </div>
+            
+            <div class="highlight-box">
+                <p><strong>Belangrijk:</strong> De VoedselMaker is ontworpen om uitsluitend te werken met de speciale voedselzakjes. Deze zakjes zijn verkrijgbaar in gespecialiseerde winkels. Deze website is alleen voor informatie en biedt geen verkoopmogelijkheden.</p>
             </div>
         </div>
     </section>
@@ -573,110 +713,205 @@
     <!-- Product Details Sectie -->
     <section class="product-details" id="details">
         <div class="container">
-            <h2 class="section-title">Over de NutriChef Pro</h2>
-            <p class="section-subtitle">De NutriChef Pro is het resultaat van jarenlang onderzoek en ontwikkeling in keukentechnologie. Onze voedselmaker combineert gemak met professionele resultaten.</p>
+            <h2 class="section-title">Technologie en Innovatie</h2>
+            <p class="section-subtitle">De VoedselMaker combineert geavanceerde technologie met gebruiksvriendelijk design voor een revolutionaire kookervaring.</p>
             
             <div class="details-container">
                 <div class="details-text">
-                    <p>De NutriChef Pro revolutioneert de manier waarop we thuis koken. Met zijn geavanceerde technologie en gebruiksvriendelijke ontwerp maakt dit apparaat het mogelijk om in enkele minuten gezonde, heerlijke maaltijden te bereiden zonder gedoe of rommel. Of je nu een drukke professional bent die weinig tijd heeft om te koken, een ouder die gezonde maaltijden voor het gezin wil maken, of een beginnende kok die zijn vaardigheden wil verbeteren, de NutriChef Pro is ontworpen voor jou.</p>
+                    <p>De VoedselMaker vertegenwoordigt een paradigmaverschuiving in de manier waarop we thuis koken. Dit innovatieve apparaat is het resultaat van meer dan zeven jaar onderzoek en ontwikkeling door een team van voedseltechnologen, industriële ontwerpers en chef-koks. Het fundamentele concept achter de VoedselMaker is om het kookproces te stroomlijnen zonder in te leveren op smaak, voedingswaarde of culinaire creativiteit.</p>
                     
-                    <p>Het hart van de NutriChef Pro is zijn geavanceerde kooktechnologie die gelijkmatige warmteverdeling garandeert, wat resulteert in perfect gaar voedsel elke keer. Het unieke kooksysteem behoudt voedingsstoffen die vaak verloren gaan bij traditionele kookmethoden, waardoor je maaltijden niet alleen lekkerder maar ook gezonder zijn. Met de bijbehorende voedselzakjes hoef je je geen zorgen te maken over het afmeten van ingrediënten - alles is precies afgemeten voor optimale resultaten.</p>
+                    <p>Het hart van de VoedselMaker is een geavanceerd warmteverdeelsysteem dat gebruikmaakt van gerichte magnetrontechnologie gecombineerd met conventionele verwarmingselementen. Dit hybride systeem zorgt voor een perfect gelijkmatige warmteverdeling, wat resulteert in consistent gaar voedsel zonder droge plekken of ongare delen. Het unieke ontwerp van de kookkamer creëert een micro-omgeving waarin stoom en warmte optimaal worden benut, wat resulteert in een aanzienlijk kortere kooktijd vergeleken met traditionele methoden.</p>
                     
-                    <p>Veelgebruikers waarderen vooral het gemak van de NutriChef Pro. Het apparaat heeft een intuïtief bedieningspaneel met voorgeprogrammeerde instellingen voor verschillende soorten maaltijden. Of je nu soep, stoofschotel, rijstgerechten of zelfs desserts wilt maken, met een druk op de knop kiest je het juiste programma. Het schoonmaken is even eenvoudig - de binnenkant is voorzien van een antiaanbaklaag en de meeste onderdelen kunnen in de vaatwasser.</p>
+                    <p>Een van de meest revolutionaire aspecten van de VoedselMaker is het gesloten kooksysteem. In tegenstelling tot conventionele kookmethoden waarbij voedingsstoffen vaak verloren gaan in kookvocht of stoom, behoudt de VoedselMaker tot 40% meer vitaminen en mineralen. Dit wordt bereikt door het precisie-reguleren van temperatuur en druk tijdens het kookproces. Het resultaat is niet alleen gezonder voedsel, maar ook intensere smaken doordat aromatische verbindingen beter worden behouden.</p>
                     
-                    <p>Wat de NutriChef Pro echt onderscheidt van andere keukenapparaten is zijn veelzijdigheid. Het is niet alleen een snelkookpan of een stoomoven - het combineert meerdere kooktechnieken in één apparaat. Dit betekent dat je kunt stomen, sudderen, koken en zelfs bakken met dezelfde machine. De bijbehorende app biedt toegang tot honderden recepten die speciaal zijn ontwikkeld voor de NutriChef Pro, waardoor je altijd nieuwe ideeën hebt voor maaltijden.</p>
+                    <p>De voedselzakjes vormen een integraal onderdeel van het VoedselMaker-systeem. Deze zakjes zijn gemaakt van een speciaal voedselveilig materiaal dat bestand is tegen hoge temperaturen en druk, maar toch flexibel genoeg is om zich aan te passen aan de ingrediënten binnenin. Elke zak heeft een unieke interne structuur die optimale warmtegeleiding garandeert en voorkomt dat ingrediënten aan elkaar plakken of verbranden. De zakken zijn voorgevuld met precies afgemeten hoeveelheden ingrediënten, waardoor voedselverspilling wordt geminimaliseerd en consistentie wordt gegarandeerd.</p>
                     
-                    <p>De voedselzakjes zijn een integraal onderdeel van de NutriChef Pro ervaring. Elke zak bevat zorgvuldig afgemeten ingrediënten van hoge kwaliteit, vaak biologisch en altijd vers. De zakken zijn vacuüm verzegeld om versheid te garanderen en hebben een speciale coating die optimale warmtegeleiding mogelijk maakt. We bieden zakken voor verschillende dieetvoorkeuren, waaronder vegetarisch, veganistisch, glutenvrij en keto.</p>
+                    <p>Het gebruiksgemak van de VoedselMaker is ongeëvenaard. Het apparaat beschikt over een intuïtief touchscreen-display met voorgeprogrammeerde instellingen voor meer dan vijftig verschillende gerechten. Gebruikers kunnen echter ook volledig handmatige controle uitoefenen over temperatuur, druk en kooktijd voor maximere flexibiliteit. Het reinigen is bijzonder eenvoudig: de binnenkant van de kookkamer is voorzien van een keramische antiaanbaklaag, en de voedselzakjes worden eenvoudigweg weggegooid na gebruik.</p>
                     
-                    <p>Duurzaamheid staat centraal in het ontwerp van de NutriChef Pro. Het apparaat verbruikt aanzienlijk minder energie dan traditionele fornuizen en ovens, en de voedselzakjes zijn volledig recyclebaar. Onze leveringsketen is ontworpen om voedselverspilling te minimaliseren, aangezien we alleen produceren wat nodig is en ingrediënten rechtstreeks van boeren halen wanneer dat mogelijk is. Door gebruik te maken van de NutriChef Pro draag je niet alleen bij aan een gezonder leven voor jezelf, maar ook aan een gezondere planeet.</p>
+                    <p>Veiligheid staat centraal in het ontwerp van de VoedselMaker. Het apparaat beschikt over meerdere redundante veiligheidssystemen, waaronder overdrukbeveiliging, temperatuurbegrenzers en een automatische uitschakeling bij detectie van onregelmatigheden. De buitenkant blijft tijdens het hele kookproces koel genoeg om aan te raken, wat het apparaat bijzonder veilig maakt voor huishoudens met kinderen. Bovendien is de VoedselMaker gecertificeerd volgens de strengste internationale veiligheidsnormen.</p>
                     
-                    <p>De ontwikkeling van de NutriChef Pro nam meer dan vijf jaar in beslag en betrof een team van voedseltechnologen, chefs en ingenieurs. We testten tientallen prototypes en werkten samen met honderden huishoudens om feedback te verzamelen en het ontwerp te verfijnen. Het resultaat is een apparaat dat niet alleen technologisch geavanceerd is, maar ook intuïtief aanvoelt in de keuken. We zijn er trots op dat de NutriChef Pro volledig in Europa wordt ontworpen en geproduceerd, met onderdelen die voldoen aan de hoogste kwaliteitsnormen.</p>
+                    <p>Duurzaamheid was een belangrijke overweging tijdens de ontwikkeling van de VoedselMaker. Het apparaat verbruikt gemiddeld 35% minder energie dan een conventionele oven en 50% minder dan een fornuis met meerdere pitten. De voedselzakjes zijn volledig recyclebaar en worden geproduceerd met behulp van hernieuwbare energiebronnen. Het hele productieproces is ontworpen om de ecologische voetafdruk te minimaliseren, van grondstofwinning tot distributie.</p>
                     
-                    <p>Veiligheid was een topprioriteit bij het ontwerp van de NutriChef Pro. Het apparaat beschikt over meerdere veiligheidsvoorzieningen, waaronder oververhittingsbeveiliging, een automatische uitschakeling en een kinderslot. De buitenkant blijft koel tijdens het gebruik, waardoor het veilig is in huishoudens met kinderen. Bovendien is de NutriChef Pro gecertificeerd door alle belangrijke Europese veiligheidsinstanties en wordt deze geleverd met een uitgebreide garantie van drie jaar.</p>
+                    <p>De VoedselMaker is niet alleen een keukenapparaat, maar een compleet ecosysteem. De bijbehorende mobiele applicatie biedt toegang tot een uitgebreide database met recepten, voedingsinformatie en kooksuggesties op basis van persoonlijke voorkeuren en dieetbeperkingen. Gebruikers kunnen hun eigen recepten creëren en delen met een groeiende gemeenschap van VoedselMaker-enthousiastelingen. Deze sociale component voegt een extra dimensie toe aan de kookervaring.</p>
                     
-                    <p>De NutriChef Pro is meer dan alleen een keukenapparaat - het is een investering in je gezondheid en welzijn. Door gezonde maaltijden gemakkelijk en toegankelijk te maken, helpt het je om betere voedselkeuzes te maken zonder in te leveren op smaak. Veel gebruikers melden dat ze sinds ze de NutriChef Pro gebruiken, meer groenten eten, minder voedsel verspillen en minder vaak uit eten gaan, wat allemaal bijdraagt aan een gezondere levensstijl en besparingen op de lange termijn.</p>
+                    <p>De toekomstige ontwikkelingen voor de VoedselMaker zijn evenveelbelovend als het huidige apparaat. Het ontwikkelteam werkt aan geavanceerde functies zoals kunstmatige intelligentie die het kookproces kan optimaliseren op basis van ingrediëntverschillen, en sensortechnologie die de gaarheid van voedsel kan detecteren zonder fysiek contact. Er zijn ook plannen voor gespecialiseerde voedselzakjes met functionele ingrediënten, zoals probiotica of specifieke voedingssupplementen, voor diegenen met specifieke gezondheidsbehoeften.</p>
                     
-                    <p>Onze klantenondersteuning staat klaar om je te helpen bij elke stap van je NutriChef Pro ervaring. We bieden uitgebreide online bronnen, waaronder videozelfstudies, receptideeën en onderhoudstips. Ons team van voedingsdeskundigen is beschikbaar voor persoonlijk advies over hoe je het meeste uit je apparaat kunt halen. We zijn toegewijd om ervoor te zorgen dat elke NutriChef Pro gebruiker tevreden is en jarenlang kan genieten van heerlijke, gezonde maaltijden.</p>
-                    
-                    <p>De toekomst van de NutriChef Pro is net zo spannend als het heden. We werken voortdurend aan nieuwe voedselzakjes met innovatieve ingrediënten en smaken, evenals software-updates die nieuwe kookfuncties toevoegen aan bestaande apparaten. Onze gebruikersgemeenschap groeit snel, met duizenden leden die recepten, tips en succesverhalen delen op ons online platform. Door een NutriChef Pro te kopen, word je onderdeel van een beweging die gezond, lekker en duurzaam koken voor iedereen toegankelijk maakt.</p>
+                    <p>De impact van de VoedselMaker op de thuiskookcultuur is reeds merkbaar. Gebruikersrapporten wijzen op een toename van het aantal zelfgemaakte maaltijden, een vermindering van voedselverspilling, en een algemene verbetering van voedingskwaliteit. Voor veel gebruikers heeft de VoedselMaker koken opnieuw leuk gemaakt door de frustratie en het gedoe van traditionele kookmethoden te elimineren. Het apparaat democratiseert in zekere zin het koken door complexe culinaire technieken toegankelijk te maken voor iedereen, ongeacht hun ervaring in de keuken.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Sectie -->
-    <section class="features" id="features">
+    <!-- Werking Sectie -->
+    <section class="how-it-works" id="werking">
         <div class="container">
-            <h2 class="section-title">Geavanceerde Kenmerken</h2>
-            <p class="section-subtitle">De NutriChef Pro is uitgerust met de nieuwste technologie om je kookervaring te transformeren.</p>
+            <h2 class="section-title">Hoe Werkt de VoedselMaker?</h2>
+            <p class="section-subtitle">Vier eenvoudige stappen naar een heerlijke maaltijd met de revolutionaire VoedselMaker.</p>
             
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon">⚡</div>
-                    <h3 class="feature-title">Snel Koken</h3>
-                    <p>Bereid maaltijden tot 70% sneller dan met traditionele methoden. Perfect voor drukke avonden.</p>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Kies Je Zakje</h3>
+                    <p>Selecteer een voedselzakje naar keuze uit het assortiment. Elk zakje bevat alle ingrediënten voor een complete maaltijd.</p>
                 </div>
                 
-                <div class="feature">
-                    <div class="feature-icon">🌿</div>
-                    <h3 class="feature-title">Voedingsstoffen Behoud</h3>
-                    <p>Onze unieke kooktechniek behoudt vitaminen en mineralen die vaak verloren gaan bij koken.</p>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Plaats in Apparaat</h3>
+                    <p>Open de VoedselMaker en plaats het voedselzakje in de speciale houder. Sluit het deksel veilig.</p>
                 </div>
                 
-                <div class="feature">
-                    <div class="feature-icon">📱</div>
-                    <h3 class="feature-title">Smart Connectivity</h3>
-                    <p>Bedien je NutriChef Pro vanaf je smartphone met onze speciale app vol met recepten.</p>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Selecteer Programma</h3>
+                    <p>Kies op het touchscreen het gewenste programma of stel handmatig de kookinstellingen in.</p>
                 </div>
                 
-                <div class="feature">
-                    <div class="feature-icon">🔇</div>
-                    <h3 class="feature-title">Stille Operatie</h3>
-                    <p>Geniet van een rustige keuken met ons geluidsreducerende ontwerp. Minder dan 45dB tijdens gebruik.</p>
-                </div>
-                
-                <div class="feature">
-                    <div class="feature-icon">💧</div>
-                    <h3 class="feature-title">Waterbesparend</h3>
-                    <p>Gebruikt tot 60% minder water dan traditionele kookmethoden dankzij gesloten systeem.</p>
-                </div>
-                
-                <div class="feature">
-                    <div class="feature-icon">🔄</div>
-                    <h3 class="feature-title">Veelzijdige Functies</h3>
-                    <p>Kook, stoom, bak en ontdooi met één apparaat. Vervangt meerdere keukenapparaten.</p>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Geniet van Je Maaltijd</h3>
+                    <p>Na het signaal open je het apparaat en giet je de perfect gare maaltijd op je bord. Klaar om te eten!</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Sectie -->
-    <section class="testimonials">
+    <!-- Technische Specificaties -->
+    <section class="specifications">
         <div class="container">
-            <h2 class="section-title">Wat Onze Klanten Zeggen</h2>
-            <p class="section-subtitle">Duizenden tevreden klanten hebben hun kookervaring getransformeerd met de NutriChef Pro.</p>
+            <h2 class="section-title">Technische Specificaties</h2>
+            <p class="section-subtitle">Gedetailleerde informatie over de technische kenmerken van de VoedselMaker.</p>
             
-            <div class="testimonial-slider">
-                <div class="testimonial active" id="testimonial1">
-                    <p class="testimonial-text">"De NutriChef Pro heeft mijn leven veranderd! Als alleenstaande ouder met een fulltime baan had ik nooit tijd om gezond te koken. Nu heb ik in 15 minuten een voedzame maaltijd op tafel. Mijn kinderen zijn dol op de maaltijden en ik voel me veel beter omdat ik weet dat ze gezond eten."</p>
-                    <p class="testimonial-author">- Marieke van Dijk, Utrecht</p>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h3 class="spec-title">Afmetingen</h3>
+                    <p>Breedte: 35 cm<br>Hoogte: 28 cm<br>Diepte: 40 cm<br>Gewicht: 8,5 kg</p>
                 </div>
                 
-                <div class="testimonial" id="testimonial2">
-                    <p class="testimonial-text">"Ik was sceptisch over weer een keukenapparaat, maar de NutriChef Pro heeft me overtuigd. De voedselzakjes zijn zo handig en de maaltijden zijn verrassend lekker. Ik heb de bosgroene versie en hij staat prachtig in mijn keuken. Het schoonmaken is een fluitje van een cent!"</p>
-                    <p class="testimonial-author">- Thomas Jansen, Amsterdam</p>
+                <div class="spec-item">
+                    <h3 class="spec-title">Vermogen</h3>
+                    <p>Maximaal vermogen: 1500 Watt<br>Spanning: 220-240V<br>Frequentie: 50-60Hz</p>
                 </div>
                 
-                <div class="testimonial" id="testimonial3">
-                    <p class="testimonial-text">"Als student had ik altijd moeite met gezond eten binnen een budget. De NutriChef Pro heeft dit opgelost. De voedselzakjes zijn betaalbaar en ik verspil geen ingrediënten meer. Ik heb de oceaanblauwe versie en mijn huisgenoten zijn jaloers!"</p>
-                    <p class="testimonial-author">- Sanne de Vries, Rotterdam</p>
+                <div class="spec-item">
+                    <h3 class="spec-title">Capaciteit</h3>
+                    <p>Maximaal volume: 5 liter<br>Aantal porties: 2-4 personen<br>Kooktijd: 5-25 minuten</p>
+                </div>
+                
+                <div class="spec-item">
+                    <h3 class="spec-title">Materialen</h3>
+                    <p>Buitenkant: Roestvrij staal<br>Binnenkant: Keramische coating<br>Handvatten: Hittebestendig kunststof</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Vergelijkingstabel -->
+    <section class="comparison">
+        <div class="container">
+            <h2 class="section-title">Vergelijking met Traditioneel Koken</h2>
+            <p class="section-subtitle">Hoe de VoedselMaker zich verhoudt tot conventionele kookmethoden.</p>
             
-            <div class="slider-nav">
-                <div class="slider-dot active" onclick="showTestimonial(0)"></div>
-                <div class="slider-dot" onclick="showTestimonial(1)"></div>
-                <div class="slider-dot" onclick="showTestimonial(2)"></div>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Kenmerk</th>
+                        <th>VoedselMaker</th>
+                        <th>Traditioneel Koken</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gemiddelde kooktijd</td>
+                        <td><span class="checkmark">✓</span> 12 minuten</td>
+                        <td><span class="cross">✗</span> 35 minuten</td>
+                    </tr>
+                    <tr>
+                        <td>Energieverbruik per maaltijd</td>
+                        <td><span class="checkmark">✓</span> 0.35 kWh</td>
+                        <td><span class="cross">✗</span> 0.85 kWh</td>
+                    </tr>
+                    <tr>
+                        <td>Voedingsstoffen behoud</td>
+                        <td><span class="checkmark">✓</span> 85-95%</td>
+                        <td><span class="cross">✗</span> 60-75%</td>
+                    </tr>
+                    <tr>
+                        <td>Bereidingsgemak</td>
+                        <td><span class="checkmark">✓</span> Zeer eenvoudig</td>
+                        <td><span class="cross">✗</span> Complex</td>
+                    </tr>
+                    <tr>
+                        <td>Schoonmaaktijd</td>
+                        <td><span class="checkmark">✓</span> 2 minuten</td>
+                        <td><span class="cross">✗</span> 15 minuten</td>
+                    </tr>
+                    <tr>
+                        <td>Voedselverspilling</td>
+                        <td><span class="checkmark">✓</span> Minimale verspilling</td>
+                        <td><span class="cross">✗</span> Significant</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Veelgestelde Vragen -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Veelgestelde Vragen</h2>
+            <p class="section-subtitle">Antwoorden op de meest voorkomende vragen over de VoedselMaker.</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(1)">
+                        Zijn de voedselzakjes herbruikbaar?
+                        <span id="indicator1">+</span>
+                    </div>
+                    <div class="faq-answer" id="answer1">
+                        <p>De voedselzakjes zijn ontworpen voor eenmalig gebruik. Na het koken kunnen ze worden weggegooid. Het materiaal is volledig recyclebaar, waardoor de impact op het milieu wordt geminimaliseerd. Hergebruik wordt niet aanbevolen omdat de integriteit van het materiaal na verhitting kan zijn aangetast.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(2)">
+                        Kan ik mijn eigen recepten maken met de VoedselMaker?
+                        <span id="indicator2">+</span>
+                    </div>
+                    <div class="faq-answer" id="answer2">
+                        <p>Ja, de VoedselMaker biedt volledige flexibiliteit. Hoewel de voedselzakjes voorgevuld zijn met specifieke ingrediënten, kun je ook je eigen ingrediënten toevoegen via de speciale ingrediëntentray. Het touchscreen biedt handmatige instellingen voor temperatuur, druk en tijd, zodat je elk recept kunt aanpassen aan je voorkeuren.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(3)">
+                        Is de VoedselMaker veilig voor kinderen?
+                        <span id="indicator3">+</span>
+                    </div>
+                    <div class="faq-answer" id="answer3">
+                        <p>De VoedselMaker is uitgerust met meerdere veiligheidsvoorzieningen die hem geschikt maken voor gebruik in huishoudens met kinderen. Deze omvatten een kinderslot, automatische uitschakeling en een koelblijvende buitenkant. Tijdens het kookproces wordt het apparaat vergrendeld en kan het alleen worden geopend wanneer de kookcyclus is voltooid en de inhoud voldoende is afgekoeld.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(4)">
+                        Waar kan ik voedselzakjes kopen?
+                        <span id="indicator4">+</span>
+                    </div>
+                    <div class="faq-answer" id="answer4">
+                        <p>Voedselzakjes zijn verkrijgbaar bij gespecialiseerde keukenwinkels, grote warenhuizen en via de officiële distributeurs van VoedselMaker. Deze website dient uitsluitend voor informatieve doeleinden en biedt geen mogelijkheid tot aankoop. Voor verkoopinformatie kunt u contact opnemen met officiële verkooppunten.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(5)">
+                        Hoe lang gaat de VoedselMaker mee?
+                        <span id="indicator5">+</span>
+                    </div>
+                    <div class="faq-answer" id="answer5">
+                        <p>Bij normaal gebruik en regelmatig onderhoud gaat de VoedselMaker naar verwachting minstens 8-10 jaar mee. De kritieke componenten zijn ontworpen voor langdurig gebruik, en het apparaat wordt geleverd met een garantie van 3 jaar op onderdelen en arbeid. Regelmatig onderhoud, zoals het schoonhouden van de afdichtingen en het controleren van de verwarmingselementen, kan de levensduur verder verlengen.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -686,33 +921,30 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>NutriChef Pro</h3>
-                    <p>De revolutionaire voedselmaker die gezond, lekker en gemakkelijk koken voor iedereen toegankelijk maakt. Beschikbaar in 4 prachtige kleuren.</p>
-                    <p>🍳 Koken heruitgevonden 🍳</p>
+                    <h3>VoedselMaker</h3>
+                    <p>Het revolutionaire keukenapparaat dat koken transformeert. Met vier stijlvolle kleuren en speciale voedselzakjes maakt de VoedselMaker gezonde, heerlijke maaltijden in minuten.</p>
+                    <p>🍲 Koken heruitgevonden voor de moderne tijd 🍲</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>NutriChef BV</p>
-                    <p>Keukenstraat 123</p>
-                    <p>1018 AB Amsterdam</p>
-                    <p>info@nutrichefpro.nl</p>
-                    <p>020-1234567</p>
+                    <h3>Informatie</h3>
+                    <p>Deze website is gemaakt voor een schoolproject over productpresentatie en marketing. Alle informatie op deze pagina is fictief en dient alleen educatieve doeleinden.</p>
+                    <p>Geen van de producten of diensten die op deze site worden genoemd, is daadwerkelijk te koop via deze pagina.</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Snelle Links</h3>
-                    <p><a href="#home" style="color:#bbb; text-decoration:none;">Home</a></p>
-                    <p><a href="#colors" style="color:#bbb; text-decoration:none;">Kleuren</a></p>
-                    <p><a href="#packets" style="color:#bbb; text-decoration:none;">Voedselzakjes</a></p>
-                    <p><a href="#details" style="color:#bbb; text-decoration:none;">Productdetails</a></p>
-                    <p><a href="#features" style="color:#bbb; text-decoration:none;">Kenmerken</a></p>
+                    <h3>Projectgegevens</h3>
+                    <p>Schoolproject: Productpresentatie<br>Onderwerp: VoedselMaker keukenapparaat<br>Aantal regels code: 1000+<br>Doel: Informatieve presentatie</p>
+                    <p>Dit project demonstreert webdevelopment vaardigheden met HTML, CSS en JavaScript.</p>
                 </div>
             </div>
             
+            <div class="disclaimer">
+                <p><strong>Belangrijke mededeling:</strong> Deze website is uitsluitend gemaakt voor educatieve doeleinden als onderdeel van een schoolproject. De VoedselMaker is een fictief product en wordt niet daadwerkelijk verkocht via deze site. Er is geen mogelijkheid tot aankoop, bestelling of reservering op deze pagina.</p>
+            </div>
+            
             <div class="copyright">
-                <p>&copy; 2023 NutriChef Pro. Alle rechten voorbehouden. | Schoolproject Voedsel Maker Reclame</p>
-                <p>Deze pagina bevat meer dan 1000 regels aan code en tekst over de NutriChef Pro voedselmaker.</p>
+                <p>&copy; 2023 Schoolproject VoedselMaker - Alle informatie is fictief en voor educatieve doeleinden | Deze pagina bevat meer dan 1000 regels aan HTML, CSS en JavaScript code</p>
             </div>
         </div>
     </footer>
@@ -722,77 +954,84 @@
         let selectedColor = null;
         
         function selectColor(colorId) {
-            // Verwijder de 'selected' klasse van alle kleuropties
+            // Verwijder de 'selected-color' klasse van alle kleuropties
             document.querySelectorAll('.color-option').forEach(option => {
-                option.classList.remove('selected');
+                option.classList.remove('selected-color');
             });
             
-            // Voeg de 'selected' klasse toe aan de geselecteerde kleur
+            // Voeg de 'selected-color' klasse toe aan de geselecteerde kleur
             const selectedOption = document.getElementById(colorId);
-            selectedOption.classList.add('selected');
+            selectedOption.classList.add('selected-color');
             
             selectedColor = colorId;
             
-            // Toon een bevestiging
-            alert(`Je hebt de ${getColorName(colorId)} geselecteerd! Deze kleur zal worden gereserveerd voor jouw bestelling.`);
-        }
-        
-        function getColorName(colorId) {
+            // Toon informatie over de geselecteerde kleur
             const colorNames = {
-                'classic-red': 'Klassiek Rood',
-                'ocean-blue': 'Oceaan Blauw',
-                'forest-green': 'Bos Groen',
-                'sunshine-yellow': 'Zonneschijn Geel'
+                'vurig-rood': 'Vurig Rood',
+                'hemels-blauw': 'Hemels Blauw',
+                'aards-groen': 'Aards Groen',
+                'zonnig-geel': 'Zonnig Geel'
             };
             
-            return colorNames[colorId] || 'Onbekende kleur';
+            showMessage(`U heeft ${colorNames[colorId]} geselecteerd als uw voorkeurskleur. Deze website is alleen voor informatie en biedt geen verkoopmogelijkheden.`);
         }
         
-        // Testimonial slider functionaliteit
-        let currentTestimonial = 0;
-        const testimonials = document.querySelectorAll('.testimonial');
-        const dots = document.querySelectorAll('.slider-dot');
-        
-        function showTestimonial(index) {
-            // Verberg alle testimonials
-            testimonials.forEach(testimonial => {
-                testimonial.classList.remove('active');
-            });
+        // FAQ functionaliteit
+        function toggleAnswer(faqNumber) {
+            const answer = document.getElementById(`answer${faqNumber}`);
+            const indicator = document.getElementById(`indicator${faqNumber}`);
             
-            // Verwijder active klasse van alle dots
-            dots.forEach(dot => {
-                dot.classList.remove('active');
-            });
-            
-            // Toon de geselecteerde testimonial en activeer de bijbehorende dot
-            testimonials[index].classList.add('active');
-            dots[index].classList.add('active');
-            
-            currentTestimonial = index;
+            if (answer.classList.contains('open')) {
+                answer.classList.remove('open');
+                indicator.textContent = '+';
+            } else {
+                // Sluit eerst alle andere antwoorden
+                document.querySelectorAll('.faq-answer').forEach(item => {
+                    item.classList.remove('open');
+                });
+                document.querySelectorAll('.faq-question span').forEach(ind => {
+                    ind.textContent = '+';
+                });
+                
+                answer.classList.add('open');
+                indicator.textContent = '−';
+            }
         }
         
-        // Automatisch wisselen van testimonials
-        function autoRotateTestimonials() {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            showTestimonial(currentTestimonial);
+        // Toon een informatiebericht
+        function showMessage(message) {
+            alert(`Informatie: ${message}\n\nLet op: Deze website is alleen voor informatieve doeleinden en maakt deel uit van een schoolproject. Er is geen mogelijkheid tot aankoop of bestelling.`);
         }
         
-        // Start de automatische rotatie
-        setInterval(autoRotateTestimonials, 5000);
+        // Toon meer informatie over het project
+        function showMoreInfo() {
+            const info = `Deze website is een schoolproject over webdevelopment en productpresentatie.\n\n` +
+                        `Product: VoedselMaker (fictief keukenapparaat)\n` +
+                        `Doel: Informatieve presentatie zonder verkoopfunctionaliteit\n` +
+                        `Technologieën: HTML, CSS, JavaScript\n` +
+                        `Regels code: Meer dan 1000\n\n` +
+                        `Alle informatie op deze pagina is fictief en voor educatieve doeleinden.`;
+            
+            alert(info);
+        }
         
         // Smooth scrolling voor navigatielinks
-        document.querySelectorAll('nav a, .cta-button').forEach(anchor => {
+        document.querySelectorAll('nav a, .info-button').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                if(this.getAttribute('href').startsWith('#')) {
+                if(this.getAttribute('href') && this.getAttribute('href').startsWith('#')) {
                     e.preventDefault();
                     
                     const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
                     const targetElement = document.querySelector(targetId);
                     
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
                 }
             });
         });
@@ -801,9 +1040,8 @@
         document.querySelectorAll('.packet-card').forEach(card => {
             card.addEventListener('click', function() {
                 const title = this.querySelector('.packet-title').textContent;
-                const price = this.querySelector('.packet-price').textContent;
                 
-                alert(`Je hebt ${title} geselecteerd! Prijs: ${price}\n\nVoeg dit product toe aan je winkelwagen om verder te gaan met je bestelling.`);
+                showMessage(`U heeft informatie bekeken over het voedselzakje: "${title}". Deze zakjes zijn speciaal ontworpen voor gebruik met de VoedselMaker.`);
             });
         });
         
@@ -811,16 +1049,42 @@
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+                header.style.boxShadow = '0 6px 25px rgba(0,0,0,0.15)';
             } else {
                 header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
             }
         });
         
-        // Toon een welkomstbericht wanneer de pagina laadt
-        window.addEventListener('DOMContentLoaded', (event) => {
+        // Initialisatie wanneer de pagina laadt
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log("VoedselMaker informatiepagina geladen - Schoolproject");
+            console.log("Deze pagina bevat meer dan 1000 regels aan code en tekst.");
+            console.log("Let op: Dit is een educatief project zonder verkoopmogelijkheden.");
+            
+            // Voeg een welkomstbericht toe
             setTimeout(() => {
-                console.log("Welkom bij de NutriChef Pro reclamepagina! Deze pagina bevat meer dan 1000 regels aan code en tekst.");
+                const welcomeMsg = document.createElement('div');
+                welcomeMsg.style.cssText = `
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    background: #4CAF50;
+                    color: white;
+                    padding: 15px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                    z-index: 1000;
+                    max-width: 300px;
+                    font-size: 14px;
+                    display: none;
+                `;
+                welcomeMsg.innerHTML = `<strong>Welkom bij de VoedselMaker informatiepagina!</strong><br>Dit is een schoolproject over webdevelopment.`;
+                document.body.appendChild(welcomeMsg);
+                
+                welcomeMsg.style.display = 'block';
+                setTimeout(() => {
+                    welcomeMsg.style.display = 'none';
+                }, 5000);
             }, 1000);
         });
     </script>
